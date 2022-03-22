@@ -8,6 +8,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'byebug'
 
-gem 'dry-schema', git: 'https://github.com/cerascreen/dry-schema.git', branch: 'multi_or_support'
+gem 'dry-schema'
 
 gem 'rspec'

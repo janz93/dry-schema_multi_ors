@@ -18,6 +18,6 @@ RSpec.describe 'foo' do
 
   it 'does something' do
     schema = Dry::Schema.Params do required(:lab_code).hash(BadQuality | Psa) end
-    expect(schema.call('lab_code' => { psa: "invalid" }).errors).to eq(true)
+    expect(schema.call('lab_code' => { psa: "invalid" }).errors.first.left).to eq(true)
   end
 end
